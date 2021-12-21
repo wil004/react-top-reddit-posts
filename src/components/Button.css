@@ -1,0 +1,102 @@
+.navButton {
+    background-color: lightseagreen;
+    border-radius: 20px;
+    max-width: 30%;
+    font-size: 38px;
+    border: none;
+}
+
+
+.navButton:visited {
+    color: black;
+}
+
+.navButton:hover {
+    border: 8px solid yellow;
+    cursor: pointer;
+    background-color: #6ae3da;
+}
+
+.navButton:hover:disabled {
+    border: none;
+    text-decoration: none;
+    cursor: default;
+    background-color: lightseagreen;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    margin: 30px auto 20px auto;
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 50px;
+    border-radius: 20px;
+}
+
+.buttons h2 {
+    background-color: black;
+    color: white;
+    opacity: 0.7;
+    border-radius: 20px;
+    padding: 8px;
+}
+
+#toTop {
+    text-decoration: none;
+    pointer-events: none;
+    color: black;
+}
+
+@media only screen and (max-width: 1080px) {
+    .navButton {
+        background-color: lightseagreen;
+        border-radius: 10px;
+        width: 30%;
+        font-weight: bold;
+        font-size: 7px;
+        border: none;
+    }
+
+    .navButton:hover {
+        border: 2px solid yellow;
+        cursor: pointer;
+        background-color: #6ae3da;
+    }
+
+    .navButton:hover:disabled {
+        border: none;
+        text-decoration: none;
+        cursor: default;
+        background-color: lightseagreen;
+    }
+
+    .buttons{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 40%;
+        margin: 8px auto 8px auto;
+        background-color: rgba(255, 255, 255, 0.4);
+        height: 20px;
+        border-radius: 20px;
+    }
+
+    .buttons p {
+        font-size: 6px;
+        color: white;
+        opacity: 0.7;
+        border-radius: 10px;
+        padding: 3px;
+    }
+
+    .buttons h2 {
+        font-size: 5px;
+        background-color: black;
+        color: white;
+        opacity: 0.7;
+        border-radius: 10px;
+        padding: 3px;
+    }
+}
