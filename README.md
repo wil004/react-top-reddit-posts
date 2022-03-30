@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+Dit project is een SPA (single page application) waarbij er gebruik wordt gemaakt van dynamic routing.
+In totaal zijn er 2 routes eentje voor de overzichten pagina en 1 voor de informatie pagina.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In dit project worden de gegevens over de actuele top 100 reddit posts uit een database gehaald d.m.v. een api.
 
-## Available Scripts
+Door useEffect toe te voegen is het mogelijk de opgevraagde data in een useState variabele op te slaan.
+Gebruikte ik hier geen useEffect voor dan re-renderde de pagina na elke waarde-toewijzing aan de state variabele
+waardoor je dan dus in een oneindige loop terecht komt.
 
-In the project directory, you can run:
+Dankzij useEffect (en de map method met wat conditional statements) worden er
+steeds maar 10 posts per pagina weergeven (anders was de laadtijd wel erg lang).
+Hiervoor heb ik een pageNumber state variabele aangemaakt! Elke keer als deze verandert, 
+rendert de pagina opnieuw 10 posts.
 
-### `npm start`
+De 10 posts worden stuk voor stuk op de pagina geinjecteerd door de map methode aan te roepen
+op de state variabele waar de data (objecten) in staan opgeslagen.
+In de map methode wordt er ook steeds een NavLink aangemaakt met een unieke id.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Deze unieke id hoort bij 1 object en komt uit de database.
+Wanneer je op de link klikt en je naar de Subreddit pagina navigeert, wordt dit id opgeslagen d.m.v. useParams().
+De opgehaalde database in de useState variabele wordt ook meegestuurd via een property naar de andere pagina.
+Hier wordt gebruik gemaakt van de find method om te zoeken welk object-id overeenkomt
+met de id van de useParameter(), hiervoor gebruik je uiteraard de in de property meegestuurde stateVariabele
+(hier roep je namelijk de find method op aan).
+Wanneer deze gevonden is wordt dit object in een variabele gestopt.
+Dit object wordt weer gebruikt voor een api call naar een andere upi endpoint.
+Met dit object haal je dus verder gedetailleerde data van het object op d.m.v. een api.
+Uit de opgehaalde data van het nieuwe endpoint wordt de informatie pagina opgebouwd.
+Met useHistory() kan je op de ga terug knop drukken om terug te gaan naar de homepagina.
+Je kan er ook voor kiezen naar de reddit pagina zelf toe te gaan!
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Ook kun je direct via home naar een reddit pagina toe navigeren dit doe je door op go to reddit page te klikken.
 
-### `npm test`
+INSTALLATIE GUIDE:
+Als het goed is staan alle dependencies in de package json en kunnen ze worden geïnstalleerd met.
+- Npm install
+Er wordt gebruik gemaakt van axios om data uit de database te fetchen en van react-router-dome@5.2.0
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Voor vragen of een feedback voel je vrij (via whatsapp) contact met me op te nemen.
+Ik ben bereikbaar op het nummer 06-40324337
 
-### `npm run build`
+![img_1.png](img_1.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![img.png](img.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![img_2.png](img_2.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![img_3.png](img_3.png)

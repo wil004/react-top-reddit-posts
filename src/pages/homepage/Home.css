@@ -1,0 +1,107 @@
+.posts {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 35%;
+    margin: 0 auto 70px auto;
+    border: 1px solid #342c2c;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.mainTitle {
+    font-family: Algerian;
+    color: #ffd271;
+    font-weight: bold;
+    font-size: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 40%;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 50px;
+}
+
+.homeImage {
+    width: 45%;
+    height: 45%;
+}
+
+.subMainTitle {
+    font-family: Algerian;
+    color: #c78a00;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 20%;
+    margin: 10px auto;
+    border-radius: 50px;
+}
+
+.subredditHeader {
+    color: #149d93;
+    font-weight: 700;
+    font-size: 32px;
+    background-color: black;
+    padding: 20px;
+    margin-top: 0;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+@media only screen and (max-width: 1080px) {
+    .posts {
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 45%;
+        margin: 0 auto 20px auto;
+        border: 1px solid #342c2c;
+        text-align: center;
+        border-radius: 30px;
+    }
+
+    .posts h2 {
+        font-size: 10px;
+    }
+
+    .posts p {
+        font-size: 10px;
+    }
+
+    .homeImage {
+        height: 50%;
+        width: 50%;
+    }
+
+    .mainTitle {
+        font-family: Algerian;
+        color: #ffd271;
+        font-weight: bold;
+        font-size: 12px;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 40%;
+        margin: 0 auto;
+        padding: 10px;
+        border-radius: 50px;
+    }
+
+
+    .subMainTitle {
+        font-family: Algerian;
+        color: #c78a00;
+        font-weight: bold;
+        font-size: 5px;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 20%;
+        margin: 10px auto;
+        border-radius: 50px;
+    }
+
+    .subredditHeader {
+        color: #149d93;
+        font-weight: 700;
+        font-size: 20px;
+        background-color: black;
+        padding: 20px;
+        margin-top: 0;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+
+}
