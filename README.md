@@ -36,9 +36,6 @@ Als het goed is staan alle dependencies in de package json en kunnen ze worden g
 - Npm install
 Er wordt gebruik gemaakt van axios om data uit de database te fetchen en van react-router-dome@5.2.0
 
-Voor vragen of een feedback voel je vrij (via whatsapp) contact met me op te nemen.
-Ik ben bereikbaar op het nummer 06-40324337
-
 ![img_1.png](img_1.png)
 
 ![img.png](img.png)
